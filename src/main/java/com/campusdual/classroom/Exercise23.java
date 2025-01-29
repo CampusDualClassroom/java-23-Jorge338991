@@ -7,20 +7,16 @@ public class Exercise23 {
 
     public static Map<String, Person> createHashMap() {
         Map mapa = new HashMap<String, Person>();
-        Person p1 = new Person("John", "Smith");
-        Teacher t = new Teacher("María", "Montessori", "Educación");
-        PoliceOfficer po = new PoliceOfficer("Jake", "Peralta", "B-99");
-        Doctor d = new Doctor("Gregory", "House", "Nefrología e infectología");
-        addMapValue(mapa, "person", p1);
-        addMapValue(mapa, "teacher", t);
-        addMapValue(mapa, "police", po);
-        addMapValue(mapa, "doctor", d);
+        mapa.put("person",new Person("John", "Smith"));
+        mapa.put("teacher",new Teacher("María", "Montessori", "Educación"));
+        mapa.put("police",new PoliceOfficer("Jake", "Peralta", "B-99"));
+        mapa.put("doctor",new Doctor("Gregory", "House", "Nefrología e infectología"));
         return mapa;
     }
 
     public static Person addMapValue(Map<String, Person> map, String key, Person value) {
         map.put(key, value);
-        return value;
+        return map.get(key);
     }
 
     public static void printMapValues(Map<String, Person> map) {
