@@ -20,6 +20,12 @@ public class Exercise23 {
     }
 
     public static void printMapValues(Map<String, Person> map) {
+        /*
+        for(Map.Entry<String, Person> entry : map.entrySet()){
+            System.out.println(entry.getKey() + ": ");
+            entry.getValue().getDetails();
+        }
+        */
         map.forEach((clave, valor) -> {
             System.out.println("Clave: " + clave + "; Nombre completo: " + valor.name + " " + valor.surname);
         });
